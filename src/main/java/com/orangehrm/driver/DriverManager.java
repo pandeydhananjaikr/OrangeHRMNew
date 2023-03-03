@@ -1,4 +1,4 @@
-package org.example.driver;
+package com.orangehrm.driver;
 
 import org.openqa.selenium.WebDriver;
 

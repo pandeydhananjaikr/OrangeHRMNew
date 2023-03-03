@@ -1,23 +1,18 @@
-package org.example.driver;
+package com.orangehrm.driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
+import com.orangehrm.utils.ReadPropertyFile;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Objects;
 
-import static org.example.driver.DriverManager.unload;
-
 public class Driver extends DriverManager{
 
-    public static WebDriver driver;
-
-    public static void initDriver() {
-        if (Objects.isNull(driver)) {
+    public static void initDriver() throws Exception {
+        if (Objects.isNull(DriverManager.getDriver())) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            DriverManager.setDriver(driver);
-            DriverManager.getDriver().get("https://www.google.com");
+            DriverManager.setDriver(new ChromeDriver());
+            DriverManager.getDriver().get(ReadPropertyFile.get("url"));
         }
     }
 

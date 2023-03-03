@@ -12,7 +12,7 @@
 <!--                </methods>-->
             </class>
 
-            <class name="TestCases.LoginTestPage1"></class>
+<!--            <class name="TestCases.HomaPageTests"></class>-->
 
         </classes>
     </test>
