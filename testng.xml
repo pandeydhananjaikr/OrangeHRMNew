@@ -5,7 +5,7 @@
             verbose="2" preserve-order="true"
           name="/home/dhananjai/IdeaProjects/OrangeHRMNew/src/test/java/Tests">
         <classes>
-            <class name="Tests.OrangeHRMTest">
+            <class name="Tests.OrangeHRMTests">
 <!--                <methods>-->
 <!--                    <include name="test1"/>-->
 <!--                    <include name="test2"/>-->
