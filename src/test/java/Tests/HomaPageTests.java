@@ -1,4 +1,4 @@
-package TestCases;
+package Tests;
 
 import com.orangehrm.driver.DriverManager;
 import org.openqa.selenium.By;
@@ -6,10 +6,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 
 
@@ -27,6 +25,16 @@ public final class HomaPageTests extends BaseTest {
         Assert.assertTrue(title.toLowerCase().matches("\\w.*"+"google search"));
         Assert.assertTrue(title.length()>15);
         Assert.assertTrue(title.length()<100);
+
+
+        //AssertJ
+//        Assertions.assertThat(title)
+//                .as("Object is actually null").isNotNull()
+//                .as("It does not contain expected text").containsIgnoringCase("google search")
+//                .matches("\\w.*"+"google search")
+//                .hasSizeBetween(15, 100);
+
+
         List<WebElement> elements =  DriverManager.getDriver().findElements(By.xpath("//h3"));
         Assert.assertEquals(elements.size(), 8);
         boolean isElementPresent = false;

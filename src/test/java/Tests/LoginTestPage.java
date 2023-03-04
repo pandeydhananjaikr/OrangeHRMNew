@@ -1,4 +1,4 @@
-package TestCases;
+package Tests;
 
 import com.orangehrm.driver.Driver;
 import com.orangehrm.driver.DriverManager;

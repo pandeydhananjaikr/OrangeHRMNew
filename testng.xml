@@ -3,16 +3,16 @@
 <suite name="All Test Suite">
     <test thread-count="2" parallel="methods"
             verbose="2" preserve-order="true"
-          name="/home/dhananjai/IdeaProjects/OrangeHRMNew/src/test/java/TestCases">
+          name="/home/dhananjai/IdeaProjects/OrangeHRMNew/src/test/java/Tests">
         <classes>
-            <class name="TestCases.LoginTestPage">
+            <class name="Tests.OrangeHRMTest">
 <!--                <methods>-->
 <!--                    <include name="test1"/>-->
 <!--                    <include name="test2"/>-->
 <!--                </methods>-->
             </class>
 
-<!--            <class name="TestCases.HomaPageTests"></class>-->
+<!--            <class name="Tests.HomaPageTests"></class>-->
 
         </classes>
     </test>
