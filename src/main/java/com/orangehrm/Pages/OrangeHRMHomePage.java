@@ -1,20 +1,27 @@
 package com.orangehrm.Pages;
+import com.fasterxml.jackson.databind.ser.Serializers;
+import com.orangehrm.driver.Driver;
 import com.orangehrm.driver.DriverManager;
 import org.openqa.selenium.By;
-public class OrangeHRMHomePage {
-    private final By link_welcome = By.className("oxd-userdropdown-img");
-    private final By link_logOut = By.xpath("//a[text()=\"Logout\"]");
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class OrangeHRMHomePage extends BasePage {
+    private final By linkWelcome = By.className("oxd-userdropdown-img");
+    private final By linkLogOut = By.xpath("//a[text()=\"Logout\"]");
 
     public OrangeHRMHomePage clickWelcome() throws InterruptedException {
         Thread.sleep(3000);
-        DriverManager.getDriver().findElement(link_welcome).click();
+//        DriverManager.getDriver().findElement(linkWelcome).click();
+        click(linkWelcome, "present");
         return this;
     }
 
-    public OrangeHRMHomePage clickLogout() throws InterruptedException {
-        Thread.sleep(3000);
-        DriverManager.getDriver().findElement(link_logOut).click();
-        return this;
+    public OrangeHRMLoginPage clickLogout()  {
+        click(linkLogOut, "clickable");
+        return new OrangeHRMLoginPage();
     }
 
 }
