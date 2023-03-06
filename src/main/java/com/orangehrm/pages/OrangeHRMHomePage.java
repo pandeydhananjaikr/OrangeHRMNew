@@ -1,4 +1,5 @@
 package com.orangehrm.pages;
+import com.orangehrm.driver.DriverManager;
 import com.orangehrm.enums.WaitStrategy;
 import org.openqa.selenium.By;
 
@@ -8,7 +9,7 @@ public class OrangeHRMHomePage extends BasePage {
 
     public OrangeHRMHomePage clickWelcome()  {
 
-//        DriverManager.getDriver().findElement(linkWelcome).click();
+        DriverManager.getDriver().findElement(linkWelcome).click();
         click(linkWelcome, WaitStrategy.CLICKABLE);
         return this;
     }
