@@ -1,5 +1,7 @@
 package com.orangehrm.utils;
 
+import com.orangehrm.enums.ConfigProperties;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,9 +10,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
-public class ReadPropertyFile {
+public class PropertyUtils {
 
-    private ReadPropertyFile(){}
+    private PropertyUtils(){}
 
     private static Properties property = new Properties();
     private static final Map<String, String> CONFIGMAP = new HashMap<>();
@@ -37,12 +39,12 @@ public class ReadPropertyFile {
 
 
 
-    public static String get(String key) throws Exception {
+    public static String get(ConfigProperties key) throws Exception {
 
         if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key))){
             throw new Exception("Property name "+key+" is not found. Please check config.properties");
         }
-        return CONFIGMAP.get(key);
+        return CONFIGMAP.get(key.name().toLowerCase());
 
 
     }

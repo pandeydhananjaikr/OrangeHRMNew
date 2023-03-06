@@ -1,7 +1,8 @@
 package com.orangehrm.driver;
 
+import com.orangehrm.enums.ConfigProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import com.orangehrm.utils.ReadPropertyFile;
+import com.orangehrm.utils.PropertyUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Objects;
@@ -12,7 +13,7 @@ public class Driver extends DriverManager{
         if (Objects.isNull(DriverManager.getDriver())) {
             WebDriverManager.chromedriver().setup();
             DriverManager.setDriver(new ChromeDriver());
-            DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+            DriverManager.getDriver().get(PropertyUtils.get(ConfigProperties.URL));
         }
     }
 
