@@ -6,6 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class BasePage {
+
+    protected WebElement findElement(By by, WaitStrategy waitStrategy){
+        return ExplicitWaitfactory.performExplicitWait(waitStrategy, by);
+      //  return element;
+    }
     protected void click(By by, WaitStrategy waitstrategy) {
         WebElement element = ExplicitWaitfactory.performExplicitWait(waitstrategy, by);
             element.click();

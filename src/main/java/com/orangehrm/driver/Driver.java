@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import com.orangehrm.utils.PropertyUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.net.URL;
 import java.util.Objects;
 
 public class Driver extends DriverManager{
@@ -13,6 +14,7 @@ public class Driver extends DriverManager{
         if (Objects.isNull(DriverManager.getDriver())) {
             WebDriverManager.chromedriver().setup();
             DriverManager.setDriver(new ChromeDriver());
+//            String weburl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
             DriverManager.getDriver().get(PropertyUtils.get(ConfigProperties.URL));
         }
     }
