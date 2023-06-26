@@ -1,0 +1,11 @@
+com\orangehrm\pages\BasePage.class
+com\orangehrm\constants\FrameworkConstants.class
+com\orangehrm\pages\OrangeHRMHomePage.class
+com\orangehrm\pages\OrangeHRMLoginPage.class
+com\orangehrm\driver\Driver.class
+com\orangehrm\driver\DriverManager.class
+com\orangehrm\enums\ConfigProperties.class
+com\orangehrm\factories\ExplicitWaitfactory.class
+com\orangehrm\utils\PropertyUtils.class
+Learning\DataProvidertest.class
+com\orangehrm\enums\WaitStrategy.class

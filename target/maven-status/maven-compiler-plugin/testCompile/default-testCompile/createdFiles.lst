@@ -1,0 +1,9 @@
+Tests\LoginTestPage.class
+Tests\HomaPageTests.class
+com\orangehrm\assertJ\Employee.class
+com\orangehrm\assertJ\FrameworkAssertion.class
+com\orangehrm\assertJ\AssertJDemo.class
+com\orangehrm\assertJ\AssertJSoftAssertion.class
+com\orangehrm\assertJ\AssertJodaDemo.class
+Tests\BaseTest.class
+Tests\OrangeHRMTests.class

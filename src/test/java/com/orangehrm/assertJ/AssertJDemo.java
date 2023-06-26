@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-
 import org.assertj.core.api.Assertions;
 import org.assertj.core.data.Offset;
 import org.assertj.core.data.Percentage;

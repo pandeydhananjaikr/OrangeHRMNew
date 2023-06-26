@@ -1,12 +1,14 @@
 package Learning;
 
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class DataProvidertest {
 
-    @Test(dataProvider = "getdata1")
+    @Test(dataProvider = "getData1")
     public void test1(String username){
             System.out.println("entering username");
             System.out.println("entering password");
@@ -17,16 +19,16 @@ public class DataProvidertest {
         }
 
     @DataProvider
-        public Object[] getData(){
+        public String[] getData(){
         String[] a = {"one", "two", "Three"};
         return a;
     }
 
     @DataProvider
-    public Object[][] getData1(){
-        return new Object[][]{
-                {"one"},
-                {"two"},
-                {"three"}  };
+    public Object[][] getData1() throws FileNotFoundException {
+        FileInputStream fis = new FileInputStream("./"+"src/Excel/test1.xlsx");
+
+
+        ;
     }
 }
